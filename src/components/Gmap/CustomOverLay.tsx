@@ -53,7 +53,7 @@ export default class CustomOverlayView extends window.google.maps.OverlayView {
         let str = '';
 
         let detailUrl =
-            '/detail/' +
+            'https://hotel.liontravel.com/detail/' +
             this.data.CountryCode +
             '-' +
             this.data.CityCode +
