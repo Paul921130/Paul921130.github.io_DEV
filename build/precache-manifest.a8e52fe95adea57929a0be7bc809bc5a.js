@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://paul921130.github.io/build/map.html"
   },
   {
-    "revision": "efe6556cf57cfc5293cd",
+    "revision": "88f60c2797c074c41f6c",
     "url": "https://paul921130.github.io/build/map/map.js"
   },
   {
@@ -68,7 +68,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://paul921130.github.io/build/static/css/map.mobile.s.css"
   },
   {
-    "revision": "efe6556cf57cfc5293cd",
+    "revision": "88f60c2797c074c41f6c",
     "url": "https://paul921130.github.io/build/static/css/map.s.css"
   },
   {
