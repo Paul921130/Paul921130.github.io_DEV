@@ -1,0 +1,33 @@
+{
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 100,
+    "prettier.semi": true,
+    "prettier.trailingComma": "es5",
+    // Ignores the warning when there are too many changes in a repository
+    "git.ignoreLimitWarning": true,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": false
+    },
+    "todohighlight.keywords": ["@todo"],
+    "todo-tree.general.tags": ["TODO", "FIXME", "@todo"],
+    "todo-tree.regex.regex": "((.*\\*)|(//) )\\s*($TAGS).*(\\n\\s*(//|/\\*|\\*\\*)\\s{2,}.*)*",
+    "todo-tree.filtering.excludedWorkspaces": ["node_modules", "dist"],
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

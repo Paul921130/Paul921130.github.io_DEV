@@ -1,0 +1,35 @@
+{
+    "env": { "node": true, "browser": true, "commonjs": true, "es6": true },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint-config-alloy/react",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "plugins": ["react", "@typescript-eslint", "react-hooks"],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-void": "off",
+        "no-unused-vars": "off",
+        "array-callback-return": "off",
+        "space-before-function-paren": "off",
+        "no-console": "off",
+        "no-useless-escape": "off",
+        "no-case-declarations": "warn",
+        "react/sort-comp": 0,
+        "react/no-did-update-set-state": "off",
+        "react/prop-types": 0,
+        "react/no-unescaped-entities": 0,
+        "react-hooks/rules-of-hooks": "warn",
+        "react-hooks/exhaustive-deps": "warn"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
