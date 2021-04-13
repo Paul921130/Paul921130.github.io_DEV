@@ -7,6 +7,7 @@
         "start": "SET PORT=3636&&node scripts/start.js",
         "build:rel": "SET SERVER=rel&&node scripts/build.js",
         "build:prod": "SET SERVER=prod&&node scripts/build.js",
+        "build:github": "set PUBLIC_URL=https://paul921130.github.io/build&& SET SERVER=prod&&node scripts/build.js",
         "test": "node scripts/test.js",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
