@@ -6,7 +6,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
     width: 100vw;
-    height: fill-available;
 }
 
 code {
@@ -14,5 +13,9 @@ code {
 }
 #root {
     width: 100vw;
+}
+html,
+body,
+#root {
     height: fill-available;
 }

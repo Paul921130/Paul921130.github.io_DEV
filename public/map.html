@@ -39,6 +39,31 @@
             type="text/javascript"
             src="https://maps.google.com/maps/api/js?key=AIzaSyCdjsy75pAurvJ8L-hVchRRUrgZhydxP2U"
         ></script>
+        <script>
+            /*禁止用手機端的雙指縮放&雙擊縮放*/
+            window.onload = function () {
+                document.addEventListener('touchstart', function (event) {
+                    if (event.touches.length > 1) {
+                        event.preventDefault();
+                    }
+                });
+                var lastTouchEnd = 0;
+                document.addEventListener(
+                    'touchend',
+                    function (event) {
+                        var now = new Date().getTime();
+                        if (now - lastTouchEnd <= 300) {
+                            event.preventDefault();
+                        }
+                        lastTouchEnd = now;
+                    },
+                    false
+                );
+                document.addEventListener('gesturestart', function (event) {
+                    event.preventDefault();
+                });
+            };
+        </script>
         <title>React Redux App</title>
     </head>
     <body>
