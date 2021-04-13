@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const MapBlock = styled.div`
     width: 100%;
-    height: 100vh;
+    height: fill-available;
     @media (min-width: 980px) {
         height: 100vh;
         & > a > .roomInfoCard {
