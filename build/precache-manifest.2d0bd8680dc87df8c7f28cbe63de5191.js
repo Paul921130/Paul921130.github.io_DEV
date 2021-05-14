@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://paul921130.github.io/build/custom.html"
   },
   {
-    "revision": "7a3e1d922066b094934a",
+    "revision": "01afb71d2f646a777674",
     "url": "https://paul921130.github.io/build/custom/custom.js"
   },
   {
