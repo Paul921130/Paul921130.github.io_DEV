@@ -156,7 +156,8 @@ module.exports = function (webpackEnv) {
         entry: {
             app: paths.appIndexJs,
             custom: paths.appCustomJs,
-            map:paths.appMapJs,
+            map: paths.appMapJs,
+            detail: paths.appDetailJs,
         },
         output: {
             // The build folder.
@@ -585,6 +586,33 @@ module.exports = function (webpackEnv) {
                         filename: 'map.html',
                         template: paths.appMapHtml,
                         chunks: ['map'],
+                    },
+                    isEnvProduction
+                        ? {
+                              minify: {
+                                  removeComments: true,
+                                  collapseWhitespace: true,
+                                  removeRedundantAttributes: true,
+                                  useShortDoctype: true,
+                                  removeEmptyAttributes: true,
+                                  removeStyleLinkTypeAttributes: true,
+                                  keepClosingSlash: true,
+                                  minifyJS: true,
+                                  minifyCSS: true,
+                                  minifyURLs: true,
+                              },
+                          }
+                        : undefined
+                )
+            ),
+            new HtmlWebpackPlugin(
+                Object.assign(
+                    {},
+                    {
+                        inject: true,
+                        filename: 'detail.html',
+                        template: paths.appDetailmHtml,
+                        chunks: ['detail'],
                     },
                     isEnvProduction
                         ? {

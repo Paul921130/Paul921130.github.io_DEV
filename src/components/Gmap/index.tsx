@@ -22,14 +22,16 @@ const Gmap: React.FC<I_Map> = (props) => {
                 clickableIcons: false, //禁止地圖中icon的點擊事件(就是那個醜醜的infoblock)
             });
             // add event like this
-            // google.maps.event.addListener(window.gMap, 'dragend', () => {
-            //     gMap_afterDrag();
-            // });
+            window.google.maps.event.addListener(window.gMap, 'dragend', () => {
+                gMap_afterDrag();
+            });
         }
     };
-    // const gMap_afterDrag = () => {
-    //     console.log('lat:' + window.gMap.getCenter().lat(), 'lng:' + window.gMap.getCenter().lng());
-    // };
+    //地圖拖拉監聽
+    const gMap_afterDrag = () => {
+        console.log('lat:' + window.gMap.getCenter().lat(), 'lng:' + window.gMap.getCenter().lng());
+    };
+
     const m_setBounds = () => {
         let bounds = new window.google.maps.LatLngBounds();
         for (let i = 0; i < locationArr.length; i++) {
@@ -72,21 +74,21 @@ const Gmap: React.FC<I_Map> = (props) => {
         }
     };
     //建立客製化路徑線（就交給你秀一波了）
-    // const m_setPolyline = () => {
-    //     const flightPath = new window.google.maps.Polyline({
-    //         path: locationArr.map((child, i) => {
-    //             return {
-    //                 lat: child.Latitude,
-    //                 lng: child.Longitude,
-    //             };
-    //         }),
-    //         geodesic: true,
-    //         strokeColor: '#FF0000',
-    //         strokeOpacity: 1.0,
-    //         strokeWeight: 2,
-    //     });
-    //     flightPath.setMap(window.gMap);
-    // };
+    const m_setPolyline = () => {
+        const flightPath = new window.google.maps.Polyline({
+            path: locationArr.map((child, i) => {
+                return {
+                    lat: child.Latitude,
+                    lng: child.Longitude,
+                };
+            }),
+            geodesic: true,
+            strokeColor: '#FF0000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2,
+        });
+        flightPath.setMap(window.gMap);
+    };
 
     // 設置googleMap的原本Marker
     // const m_setMarkers = () => {
@@ -106,6 +108,7 @@ const Gmap: React.FC<I_Map> = (props) => {
         m_setOverLay();
         if (locationArr.length > 0) {
             m_setBounds();
+            // m_setPolyline();
         }
     }, [locationArr]);
 

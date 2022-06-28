@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,IACI,WAAY,CACZ,YAAa,CACb,uBAAwB","file":"detail.s.css","sourcesContent":[".ss {\r\n    width: 200px;\r\n    height: 300px;\r\n    background-color: violet;\r\n}\r\n"]}

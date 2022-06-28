@@ -70,6 +70,8 @@ module.exports = {
     appCustomJs: resolveModule(resolveApp, 'src/pages/custom/index'),
     appMapHtml: resolveApp('public/map.html'),
     appMapJs: resolveModule(resolveApp, 'src/pages/map/index'),
+    appDetailmHtml: resolveApp('public/detail.html'),
+    appDetailJs: resolveModule(resolveApp, 'src/pages/detail/index'),
 };
 
 module.exports.moduleFileExtensions = moduleFileExtensions;
