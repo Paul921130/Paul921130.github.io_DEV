@@ -2,13 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/App';
-import { store } from './app/store';
+import { store } from '@redux/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import logo from './logo.svg';
-
-console.log('Run Index!!!');
 
 ReactDOM.render(
     <React.StrictMode>

@@ -7,7 +7,7 @@ interface I_Map {
 
 const Gmap: React.FC<I_Map> = (props) => {
     const initMap = () => {
-        if (window.google && !window.gMap) {
+        if (window.google) {
             window.gMap = new window.google.maps.Map(document.getElementById('map'), {
                 center: { lat: 25.0642254, lng: 121.5891729 },
                 zoom: 19,

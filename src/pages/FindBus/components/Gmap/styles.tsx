@@ -4,7 +4,7 @@ export const MapBlock = styled.div`
     width: 100%;
     height: fill-available;
     @media (min-width: 980px) {
-        height: 100vh;
+        height: calc(100vh - 80px);
         & > a > .roomInfoCard {
             /*這裡指的是手機版的旅館小卡*/
             display: none !important;

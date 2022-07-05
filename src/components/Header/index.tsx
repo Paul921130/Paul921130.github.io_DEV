@@ -7,7 +7,8 @@ function Header() {
         <div className="header">
             <ul>
                 <li>
-                    <Link to="Pokemon">Pokemon</Link>
+                    {/* <Link to="Pokemon">Pokemon</Link> */}
+                    <Link to="/">Home</Link>
                     <Link to="findbus">尋找公車站</Link>
                 </li>
             </ul>

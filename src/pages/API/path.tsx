@@ -13,6 +13,6 @@ const API_Path = {
 
     //取得附近站牌資料
     NearByStop:
-        'https://tdx.transportdata.tw/api/advanced/v2/Bus/Stop/NearBy?%24top=30&%24spatialFilter=nearby(25.047675, 121.517055, 100)&%24format=JSON',
+        'https://tdx.transportdata.tw/api/advanced/v2/Bus/Stop/NearBy?%24top=30&%24spatialFilter=nearby%2825.047675%2C%20121.517055%2C%20100%29&%24format=JSON',
 };
 export default API_Path;

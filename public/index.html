@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="description" content="Web site created using create-react-app" />
+        <base href="/" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
         <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -21,6 +23,8 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+        <link href="%PUBLIC_URL%/assets/fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script
             crossorigin
             src="https://unpkg.com/react@16.13.1/umd/react.production.min.js"
@@ -37,6 +41,65 @@
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
+        <!-- <div id="accesstoken" class="align-text-bottom" style="display: none"></div>
+        <div id="apireponse" class="align-text-bottom" style="display: none"></div> -->
         <div id="root"></div>
     </body>
+    <script type="text/javascript">
+        // $(function () {
+        //     GetAuthorizationHeader();
+        //     GetApiResponse();
+        // });
+
+        // function GetAuthorizationHeader() {
+        //     const parameter = {
+        //         grant_type: 'client_credentials',
+        //         client_id: 'paul86677889-2520bcc3-ed06-43a4',
+        //         client_secret: 'ffd7e8d0-8476-4313-9909-88f1d9a387f7',
+        //     };
+
+        //     let auth_url =
+        //         'https://tdx.transportdata.tw/auth/realms/TDXConnect/protocol/openid-connect/token';
+
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: auth_url,
+        //         crossDomain: true,
+        //         dataType: 'JSON',
+        //         data: parameter,
+        //         async: false,
+        //         success: function (data) {
+        //             $('#accesstoken').text(JSON.stringify(data));
+        //         },
+        //         error: function (xhr, textStatus, thrownError) {},
+        //     });
+        // }
+
+        // function GetApiResponse() {
+        //     let accesstokenStr = $('#accesstoken').text();
+
+        //     let accesstoken = JSON.parse(accesstokenStr);
+
+        //     if (accesstoken != undefined) {
+        //         $.ajax({
+        //             type: 'GET',
+
+        //             url:
+        //                 'https://tdx.transportdata.tw/api/basic/v2/Rail/TRA/LiveTrainDelay?$top=30&$format=JSON',
+        //             headers: {
+        //                 authorization: 'Bearer ' + accesstoken.access_token,
+        //             },
+        //             async: false,
+        //             success: function (Data) {
+        //                 $('#apireponse').text(JSON.stringify(Data));
+        //                 console.log('Data', Data);
+        //             },
+        //             error: function (xhr, textStatus, thrownError) {
+        //                 console.log('errorStatus:', textStatus);
+        //                 console.log('Error:', thrownError);
+        //             },
+        //         });
+        //     }
+        // }
+    </script>
 </html>
